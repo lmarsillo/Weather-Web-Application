@@ -1,0 +1,131 @@
+* {
+	font-family: Helvetica Neue, Helvetica;
+	color: #fff;
+	margin: 0;
+}
+
+body {
+	height: 100%;
+	background-image: url('images/blue-gradient.png');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+header {
+	background-color: rgba(0,0,0,0.1);
+	padding: 2%;
+}
+
+main {
+	max-width: 1200px;
+}
+
+#user-input, #enter-btn {
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid black;
+	border-radius: 5px;
+	font-size: 60px;
+	padding: 10px;
+}
+
+#user-input::placeholder {
+	color: rgba(255,255,255,0.6);
+}
+
+.left, .right {
+	width: 48%;
+	display: inline-block;
+}
+
+.city-name {
+	font-size: 80px;
+}
+
+.current .icon img {
+	width: 30%;
+	margin: 1%;
+}
+
+.temp {
+	font-size: 120px;
+}	
+
+.wind, .humidity, .description {
+	font-size: 40px;
+}
+
+#switch-btn {
+	background-color: rgba(0,0,0,0.3);
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 5px;
+	font-size: 40px;
+}
+
+.info, .current {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	align-items: center;
+}
+
+.info {
+	justify-content: space-evenly;
+}	
+
+.hourly, .forecast {
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	align-items: stretch;
+}	
+
+.box {
+	width: 15%;
+	background-color: rgba(0,0,0,0.1);
+	border: 1px solid black;
+	padding: 5px;
+	font-size: 20px;
+	margin: 1%;
+}
+
+.box img {
+	width: 30%;
+	margin: 1%;
+}			
+
+.center {
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+}
+
+.red {
+	border: 1px solid red;
+}
+
+@media screen and (min-device-width: 414px) 
+  and (max-device-width: 736px) and (orientation: portrait) {
+  	#enter-btn {
+  		display: none;
+  	}
+
+  	.left, .right {
+  		width: 100%;
+  		margin: 3%;
+  	}
+
+  	main {
+  		zoom: 1.5;
+  	}
+
+}
+
+@media screen and (min-device-width: 414px) 
+  and (max-device-width: 736px) and (orientation: landscape) {
+  	#enter-btn {
+  		display: none;
+  	}
+
+}		

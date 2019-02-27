@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Weather</title>
+	<link rel="stylesheet" href="weather.css">
+</head>
+
+<body>
+  <header>
+    <div class="search center">
+		<input id="user-input" placeholder="Enter your city" onkeypress="enterPressed(event)"/>
+		<button id="enter-btn" onclick="updateWeather()">Enter</button>	  
+    </div>
+  </header>
+  
+  <main class="center">
+	<div class="city-name">	
+		<div id="city-name"></div>
+	</div>
+	
+	
+	<div class="current">
+		<div class="left">		
+			<div class="temp">
+				<span id="temp"></span>
+				<span id="temp-type"></span>
+			</div>
+			
+			<div class="info">
+				<div class="humidity">
+					<div id="humidity"></div>
+				</div>
+				
+				<div class="wind">
+					<div id="wind"></div>
+				</div>
+				
+				<div class="switch-btn">
+					<button id="switch-btn" onclick="switchTempUnit()" style="display: none;">°C - °F</button>
+				</div>
+			</div>
+		</div>
+		
+		<div class="right">
+			<div class="description">
+				<div id="description"></div>
+			</div>
+			
+			<div class="icon">
+				<img id="icon" src="">
+			</div>	
+		</div>
+	</div>
+
+	<div class="hourly" id="hour-container" style="display: none;">
+		<div class="box">
+			<div id="h1"></div>
+			<img id="hi1" src="">
+			<div id="ht1"></div>
+		</div>
+		<div class="box">
+			<div id="h2"></div>
+			<img id="hi2" src="">
+			<div id="ht2"></div>
+		</div>
+		<div class="box">
+			<div id="h3"></div>
+			<img id="hi3" src="">
+			<div id="ht3"></div>
+		</div>
+		<div class="box">
+			<div id="h4"></div>
+			<img id="hi4" src="">
+			<div id="ht4"></div>
+		</div>
+		<div class="box">
+			<div id="h5"></div>
+			<img id="hi5" src="">
+			<div id="ht5"></div>
+		</div>
+	</div>
+
+	<div class="forecast" id="date-container" style="display: none;">
+		<div class="box">
+			<div id="d1"></div>
+			<img id="di1" src="">
+			<div id="dt1"></div>
+		</div>
+		<div class="box">
+			<div id="d2"></div>
+			<img id="di2" src="">
+			<div id="dt2"></div>
+		</div>
+		<div class="box">
+			<div id="d3"></div>
+			<img id="di3" src="">
+			<div id="dt3"></div>
+		</div>
+		<div class="box">
+			<div id="d4"></div>
+			<img id="di4" src="">
+			<div id="dt4"></div>
+		</div>
+		<div class="box">
+			<div id="d5"></div>
+			<img id="di5" src="">
+			<div id="dt5"></div>
+		</div>
+	</div>
+
+  </main>
+  <script src="weather.js"></script>
+  
+</body>
+
+</html>
